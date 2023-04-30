@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --light-background: #EDE6E1;
+    --dark-background: #242423;
+    --red-mentor:  #990000;
+    --title-h1: #3D3B37;
+}
+
+body {
+    background-color: var(--light-background);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-news {
+    width: 10rem;
+    border: 2px solid grey;
+}
+
+/* Loading spinner */
+.spinner {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -48%);
+    border: 0.2rem solid #c6c6c6;
+    border-top: 0.2rem solid red;
+    border-radius: 50%;
+    animation: spin 1s infinite;
+}
+  
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+  /* End of loading spinner */
