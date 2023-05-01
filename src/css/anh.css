@@ -27,12 +27,7 @@ body {
 .spinner {
     width: 4rem;
     height: 4rem;
-    position: absolute;
-    top: 50%;
-    left: 48%;
-    transform: translate(-50%, -48%);
-    border: 0.2rem solid #c6c6c6;
-    border-top: 0.2rem solid red;
+    border: 2px solid red;
     border-radius: 50%;
     animation: spin 1s infinite;
 }
