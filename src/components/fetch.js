@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import '../css/anh.css';
 import { format } from "date-fns";
+import a1 from '../images/a1.jpg';
 
 export default function FetchNews() {
     const [items, setItems] = useState([]);
@@ -31,20 +32,22 @@ export default function FetchNews() {
                     <div className="spinner"></div>
                 ) : (
                     <>
-                        <article className="card-news">
-                            <h1>{headTitle.title}</h1>
-                            <a href={headTitle.url} target="_blank" rel="noreferrer">Read full article</a>
-                            <p>Category: {query}</p>
+                        <article className="poll-card">
+                            <div id="poll">
+                                <h1 className="text-4xl font-bold text-red-700">{headTitle.title}</h1>
+                                <a href={headTitle.url} target="_blank" rel="noreferrer">Read full article</a>
+                                <p>Category: {query}</p>
+                            </div>
+                            <img src={a1} alt="picture of code"/>
+                            
                         </article>
-                        <article>
+                        <article className="fetch-news">
                             {items.map(({author, created_at, title, url, objectID}) => (
-                                    <div key={objectID}>
-                                        <h2>{title}</h2>
-                                        <ul>
-                                            <li>By: {author}</li>
-                                            <li><a href={url} target="_blank" rel="noreferrer">Read full article</a></li>
-                                        </ul>
-                                        <p>Date: {format(new Date(created_at), "dd-MM-yyyy")}</p>
+                                    <div id="news-item" key={objectID}>
+                                        <h1>{title}</h1>
+                                        <a href={url} target="_blank" rel="noreferrer">Read full article</a>
+                                        <p><span>By: </span>{author}</p>
+                                        <p><span>Date: </span>{format(new Date(created_at), "dd-MM-yyyy")}</p>
                                     </div>
                                 ))}
                         </article>
