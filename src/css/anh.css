@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #242423;
+}
+
+:root {
+    --light-background: #FCFCFC;
+    --dark-background: #242423;
+    --red-mentor:  #990000;
+    --title-h1: #3D3B37;
+}
+
+body {
+    background-color: var(--light-background);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==> This is Heading and Navigator */
+
+#header {
+    width: 100%;
+    height: auto;
+    border-bottom: 0.5rem double #990000;
+}
+
+#header h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 1rem;
+    letter-spacing: 2px;
+    color: var(--title-h1);
+    font-family: 'Alfa Slab One', cursive;;
+}
+
+#header span {
+    color: var(--red-mentor);
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#header nav {
+    height: 3rem;
+    background-color: var(--red-mentor);
+    margin: 2rem 10rem 0 10rem;
+    
+}
+
+/* END <===Heading */
+
+/* ===> START main section and articles */
+
+.poll-card {
+    margin: 1rem 10rem 1rem 10rem;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    height: 20rem;
+}
+
+#poll {
+    width: 40%;
+    padding: 2rem;
+
+}
+
+#poll h1 {
+    font-family: 'Fira Sans', sans-serif;;
+}
+#poll a {
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: underline ;
+}
+
+.poll-card img {
+    width: 60%;
+}
+
+.fetch-news {
+    
+    margin: 0 10rem 0 10rem;
+}
+
+#news-item {
+    border: 1.5px solid grey;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+#news-item h1 {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--red-mentor)
+}
+#news-item a {
+    text-decoration: underline;
+}
+#news-item span {
+    font-weight: bold;
+}
+/* Loading spinner */
+.spinner {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid red;
+    border-radius: 50%;
+    animation: spin 1s infinite;
+}
+  
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+  /* End of loading spinner */
+
+/* END <==== main */
