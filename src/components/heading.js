@@ -6,14 +6,14 @@ import Home from "./navbar/home";
 import Contact from "./navbar/contact";
 import Login from "./navbar/login";
 import Setting from "./navbar/setting";
-
+import './navbar/navbar.css'
 
 export default function Heading() {
     
     return (
         <div id="header">
             <h1><span>DEV</span>&lt;NEWS/&gt;</h1>
-            <nav>
+            <nav id="navigator">
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Navbar />} >

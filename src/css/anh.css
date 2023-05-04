@@ -45,13 +45,6 @@ body {
     font-family: 'Alfa Slab One', cursive;
 }
 
-#header nav {
-    height: 3rem;
-    background-color: var(--red-mentor);
-    margin: 2rem 10rem 0 10rem;
-    
-}
-
 /* END <===Heading */
 
 /* ===> START main section and articles */
@@ -71,7 +64,7 @@ body {
 }
 
 #poll h1 {
-    font-family: 'Fira Sans', sans-serif;;
+    font-family: 'Fira Sans', sans-serif;
 }
 #poll a {
     font-weight: bold;
