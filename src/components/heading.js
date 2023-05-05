@@ -5,7 +5,7 @@ import Navbar from "./navbar/navigator";
 import Home from "./navbar/home";
 import Contact from "./navbar/contact";
 import Login from "./navbar/login";
-import Setting from "./navbar/setting";
+import Category from "./navbar/category";
 import './navbar/navbar.css'
 
 export default function Heading() {
@@ -18,7 +18,7 @@ export default function Heading() {
                     <Routes>
                         <Route path="/" element={<Navbar />} >
                             <Route index element={<Home />}/>
-                            <Route path="/setting" element={<Setting/>}/>
+                            <Route path="/setting" element={<Category/>}/>
                             <Route path="/contact" element={<Contact/>}/>
                             <Route path="/login" element={<Login/>}/>
                         </Route>

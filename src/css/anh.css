@@ -48,9 +48,15 @@ body {
 /* END <===Heading */
 
 /* ===> START main section and articles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 10rem 1rem 10rem;
+}
 
 .poll-card {
-    margin: 1rem 10rem 1rem 10rem;
+    margin-bottom: 1rem;
     border: 1px solid grey;
     display: flex;
     flex-direction: row;
@@ -78,7 +84,8 @@ body {
 
 .fetch-news {
     
-    margin: 0 10rem 0 10rem;
+    width: 100%;
+    
 }
 
 #news-item {
@@ -116,5 +123,45 @@ body {
     }
 }
   /* End of loading spinner */
+
+/* START ====> Pagination */
+
+.paginationBttns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-background);
+  }
+
+  .paginationBttns li {
+    background: none;
+  }
+  
+  .paginationBttns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--red-mentor);
+    color: var(--red-mentor);
+    cursor: pointer;
+  }
+  
+  .paginationBttns a:hover {
+    color: white;
+    background-color: var(--red-mentor);
+  }
+  
+  .paginationActive a {
+    color: white;
+    background-color: var(--red-mentor);
+  }
+  
+  .paginationDisabled a {
+    color: grey;
+    background-color: grey;
+    border-color: grey;
+  }
 
 /* END <==== main */
