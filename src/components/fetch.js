@@ -1,14 +1,17 @@
 import React, {useState, useEffect} from "react";
+import ReactPaginate from "react-paginate";
 import '../css/anh.css';
 import { format } from "date-fns";
 import a1 from '../images/a1.jpg';
 
 export default function FetchNews() {
     const [items, setItems] = useState([]);
-    const [query, setQuery] = useState("react");
+    const [query, setQuery] = useState("chatgpt");
     const [text, setText] = useState("");
     const [headTitle, setHeadTitle] = useState ([]);
     const [loading, isLoading] = useState(true)
+
+    
     useEffect( () => {
         const fetchHackerNews = async() => {
             const res = await fetch(`http://hn.algolia.com/api/v1/search?query=${query}`);
@@ -22,7 +25,16 @@ export default function FetchNews() {
     } , [query]
 
     )
-
+//Add Pagination
+    const [pageNum, setPageNum] = useState(0);
+    const itemsPerPage = 8;
+    const pagesVisited = pageNum * itemsPerPage;
+    const pagesDisplay = items.slice(pagesVisited, pagesVisited + itemsPerPage);
+//Add Page Counter
+    const countPage = Math.ceil(items.length / itemsPerPage);
+    const turnPage = ({selected}) => {
+        setPageNum(selected);
+    };    
 
 
     return(
@@ -42,15 +54,29 @@ export default function FetchNews() {
                             
                         </article>
                         <article className="fetch-news">
-                            {items.map(({author, created_at, title, url, objectID}) => (
+                            {pagesDisplay.map(({author, created_at, title, url, objectID}) => (
                                     <div id="news-item" key={objectID}>
                                         <h1>{title}</h1>
                                         <a href={url} target="_blank" rel="noreferrer">Read full article</a>
-                                        <p><span>By: </span>{author}</p>
+                                        <p><span>By: </span><a href="#">{author}</a></p>
                                         <p><span>Date: </span>{format(new Date(created_at), "dd-MM-yyyy")}</p>
                                     </div>
                                 ))}
                         </article>
+                        <div className="pagination">
+                            <ReactPaginate 
+                                previousLabel={"Previous"}
+                                nextLabel={"Next"}
+                                pageCount={countPage}
+                                onPageChange={turnPage}
+                                containerClassName={"paginationBttns"}
+                                previousLinkClassName={"previousBttn"}
+                                nextLinkClassName={"nextBttn"}
+                                disabledClassName={"paginationDisabled"}
+                                activeClassName={"paginationActive"}
+                            />
+                        </div>
+                        
                            
                                           
                     </>

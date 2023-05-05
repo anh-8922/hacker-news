@@ -7,7 +7,7 @@ const MenuItems = [
         title: "Home", url: "/",
     },
     {
-        title: "Setting", url: "/setting",
+        title: "Category", url: "/setting",
     },
     {
         title: "Contact", url: "/contact",

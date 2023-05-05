@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Setting() {
+export default function Category() {
     return (
         <div>Hello</div>
     )
