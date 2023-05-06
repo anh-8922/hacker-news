@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from "react";
 import ReactPaginate from "react-paginate";
 import '../css/anh.css';
+import '../css/responsive.css';
 import { format } from "date-fns";
 import a1 from '../images/a1.jpg';
 
 export default function FetchNews() {
     const [items, setItems] = useState([]);
-    const [query, setQuery] = useState("chatgpt");
+    const [query, setQuery] = useState("Vanilla JavaScipt");
     const [text, setText] = useState("");
     const [headTitle, setHeadTitle] = useState ([]);
     const [loading, isLoading] = useState(true)
