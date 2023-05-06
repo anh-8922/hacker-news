@@ -1,22 +1,25 @@
 .search-form {
     display: flex;
-    gap: 10px;
-    margin: 10px;
+    gap: 0.7rem;
+    margin: 0.7rem;
 }
 
 .search-input {
-    width: 500px;
-    padding: 10px;
+    width: 30rem;
+    padding: 0.8rem;
 
 
 }
 
 .search-button {
-    background-color: brown;
-    padding: 10px;
+    background-color: #990000;
+    padding: 0.7rem;
     cursor: pointer;
+    color: #fcfcfc;
 }
 
 .search-button:hover {
     background-color: white;
+    color:#990000;
+    border: 1px solid #990000;
 }
