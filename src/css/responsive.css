@@ -1,0 +1,38 @@
+@media only screen and (max-width: 845px) {
+    #header {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+    #header h1 {
+        font-size: 3rem;
+        text-align: center;
+        padding-top: 1rem;
+        letter-spacing: 2px;
+        color: var(--title-h1);
+        font-family: 'Alfa Slab One', cursive;;
+    }
+    #nav-items {
+        
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    #poll {
+        display: none;
+    }
+    .poll-card img {
+        width: 100%;
+        
+    }
+    #news-item h1 {
+        font-weight: 800;
+        font-size: 1rem;
+        color: var(--red-mentor)
+    }
+    #news-item p, a {
+        font-size: 0.8rem;
+    }
+
+    
+}

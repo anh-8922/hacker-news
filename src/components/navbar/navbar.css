@@ -1,0 +1,33 @@
+
+#nav-bar, li {
+    list-style-type: none;
+    display: inline;
+    color: #FCFCFC;
+    
+    
+    height: 3rem;
+}  
+
+
+#nav-items {
+    font-family:  'Fira Sans', sans-serif;
+    font-size: 1.3rem;
+    padding: 2rem;
+}  
+#navigator {
+    padding: 0.6rem ;
+    margin: 1rem 10rem 0 10rem;
+    background-color: var(--red-mentor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+} 
+#nav-items.active {
+    background-color: #FCFCFC;
+    color:#990000;
+    padding: 0.7rem 2rem;
+    border: 1px solid #990000;
+    
+    
+}
