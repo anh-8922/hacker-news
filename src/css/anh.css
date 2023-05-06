@@ -109,7 +109,12 @@ main {
 .spinner {
     width: 4rem;
     height: 4rem;
-    border: 2px solid red;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -48%);
+    border: 0.2rem solid #c6c6c6;
+    border-top: 0.2rem solid red;
     border-radius: 50%;
     animation: spin 1s infinite;
 }
@@ -124,7 +129,7 @@ main {
 }
   /* End of loading spinner */
 
-/* START ====> Pagination */
+/* Pagination */
 
 .paginationBttns {
     width: 80%;
@@ -133,6 +138,7 @@ main {
     display: flex;
     justify-content: center;
     background-color: var(--light-background);
+    padding: 1rem;
   }
 
   .paginationBttns li {

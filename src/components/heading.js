@@ -18,7 +18,7 @@ export default function Heading() {
                     <Routes>
                         <Route path="/" element={<Navbar />} >
                             <Route index element={<Home />}/>
-                            <Route path="/setting" element={<Category/>}/>
+                            <Route path="/category" element={<Category/>}/>
                             <Route path="/contact" element={<Contact/>}/>
                             <Route path="/login" element={<Login/>}/>
                         </Route>
