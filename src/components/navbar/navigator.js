@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
+
 
 const MenuItems = [
     {
@@ -19,18 +20,19 @@ const MenuItems = [
 
 export default function Navbar() {
     //const [click, setClick] = useState(false);
-    const menuList = MenuItems.map(({url, title}, index) => {
+    const menuList = MenuItems.map(({ url, title }, index) => {
         return (
+
             <div id='nav-bar'>
                 <li id="nav-list" key={index}>
-                <NavLink exact to={url} activeClassName="active" id='nav-items'>{title}</NavLink>
+                    <NavLink exact to={url} activeClassName="active" id='nav-items'>{title}</NavLink>
                 </li>
             </div>
-            
+
         )
     })
     //const handleClick = () => {
-        //setClick(!click);
+    //setClick(!click);
     //}
 
     return (
