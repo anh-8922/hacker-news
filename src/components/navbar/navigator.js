@@ -8,13 +8,13 @@ const MenuItems = [
         title: "Home", url: "/",
     },
     {
-        title: "Category", url: "/category",
+        title: "Top Stories", url: "/top",
     },
     {
-        title: "Contact", url: "/contact",
+        title: "Latest Stories", url: "/latest",
     },
     {
-        title: "Login", url: "/login",
+        title: "Best Stories", url: "/best",
     },
 ]
 

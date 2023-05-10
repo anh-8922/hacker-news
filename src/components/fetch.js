@@ -24,7 +24,7 @@ export default function FetchNews() {
         }
 
         fetchHackerNews();
-        isLoading(false)
+        setTimeout(() => isLoading(false), 2000);
     }, [query]
 
     )
@@ -38,6 +38,7 @@ export default function FetchNews() {
     const turnPage = ({ selected }) => {
         setPageNum(selected);
     };
+
 
     //Search input
     const handleSubmit = (e) => {
@@ -100,6 +101,7 @@ export default function FetchNews() {
                                     <h1>{title}</h1>
                                     <a href={url} target="_blank" rel="noreferrer">Read full article</a>
                                     <p><span>By: </span><a href="#">{author}</a></p>
+                                    
                                     <p><span>Date: </span>{format(new Date(created_at), "dd-MM-yyyy")}</p>
                                 </div>
                             ))}

@@ -171,3 +171,22 @@ main {
   }
 
 /* END <==== main */
+
+.foot-links {
+    height: 5rem;    
+    border-top: 4px solid #990000;
+    border-top-style: double;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    
+}
+.foot-links a {
+    padding: 0 1rem 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--red-mentor);
+    font-family: 'Fira Sans', sans-serif;
+}
