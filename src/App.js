@@ -1,18 +1,36 @@
 //import logo from './logo.svg';
 //import './App.css';
 import './css/anh.css';
-import Heading from './components/heading.js';
-import FetchNews from './components/fetch.js';
-import Footer from './components/footer.js';
+//import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout";
+import Home from "./components/navbar/home";
+import Top from "./components/navbar/top.js";
+import Latest from './components/navbar/latest';
+import Best from './components/navbar/best';
+
+
 
 function App() {
   return (
-    <div className='main'>
-      <Heading />
-      <FetchNews />
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="top" element={<Top />} />
+          <Route path="latest" element={<Latest />} />
+          <Route path="best" element={<Best />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    
   );
 }
 
 export default App;
+
+//<div className='main'>
+      
+ //     <FetchNews />
+  //    <Footer/>
+  //  </div>

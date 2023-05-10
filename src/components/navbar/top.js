@@ -1,7 +1,7 @@
 import React from "react";
-
+import FetchNews from "../fetch";
 export default function Top() {
     return (
-        <div>HEllp test</div>
+        <FetchNews />
     )
 }
