@@ -5,6 +5,7 @@ import '../css/anastasija.css';
 import '../css/responsive.css';
 import { format } from "date-fns";
 import a1 from '../images/a1.jpg';
+import { Link } from "react-router-dom";
 
 
 export default function FetchNews() {
@@ -99,7 +100,7 @@ export default function FetchNews() {
                                 <div id="news-item" key={objectID}>
                                     <h1>{title}</h1>
                                     <a href={url} target="_blank" rel="noreferrer">Read full article</a>
-                                    <p><span>By: </span><a href="#">{author}</a></p>
+                                    <p><span>By: </span> <Link to={`/user/${author}`}>{author}</Link></p>
                                     <p><span>Date: </span>{format(new Date(created_at), "dd-MM-yyyy")}</p>
                                 </div>
                             ))}

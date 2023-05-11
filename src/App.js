@@ -6,10 +6,13 @@ import FetchNews from './components/fetch.js';
 
 function App() {
   return (
-    <div className='main'>
-      <Heading />
-      <FetchNews />
-    </div>
+      <div className='main'>
+      <div>
+        <Heading />
+        <FetchNews />
+        
+      </div>
+      </div>
   );
 }
 

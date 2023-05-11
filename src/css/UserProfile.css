@@ -1,0 +1,124 @@
+/* UserProfile.css */
+
+.user-profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f6f8fa;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-stats  {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  margin-bottom: 20px;
+}
+
+.user-stats p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  
+}
+
+.user-stats span {
+  font-weight: bold;
+}
+
+.user-activity {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-details p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.activity-link a {
+  font-size: 14px;
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.activity-link a:hover {
+  text-decoration: underline;
+}
+
+/* responsive.css */
+
+@media (max-width: 768px) {
+  .user-profile {
+    padding: 10px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .user-activity {
+    padding: 10px;
+  }
+
+  .activity-details p {
+    font-size: 12px;
+  }
+
+  .activity-link a {
+    font-size: 12px;
+  }
+}
