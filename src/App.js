@@ -8,7 +8,7 @@ import Home from "./components/navbar/home";
 import Top from "./components/navbar/top.js";
 import Latest from './components/navbar/latest';
 import Best from './components/navbar/best';
-
+import Error from './components/navbar/error';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
           <Route path="top" element={<Top />} />
           <Route path="latest" element={<Latest />} />
           <Route path="best" element={<Best />} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>

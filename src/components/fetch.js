@@ -9,7 +9,7 @@ import a1 from '../images/a1.jpg';
 
 export default function FetchNews() {
     const [items, setItems] = useState([]);
-    const [query, setQuery] = useState("Vanilla JavaScipt");
+    const [query, setQuery] = useState("Software Engineer");
     const [text, setText] = useState("");
     const [headTitle, setHeadTitle] = useState([]);
     const [loading, isLoading] = useState(true)
