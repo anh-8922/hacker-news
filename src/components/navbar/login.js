@@ -1,14 +1,16 @@
 import React from "react";
 import './login.css';
-import Heading from "../heading";
+import Header from "../header";
+import Footer from "../footer";
 
 export default function Login() {
     return (
         
         <>
+        <Header/>
         <div className='main'>
       <div>
-        <Heading />
+        
         </div>
         </div>
 
@@ -27,6 +29,7 @@ export default function Login() {
 
 
         </div>
+        <Footer/>
         </>
     )
 }

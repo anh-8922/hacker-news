@@ -25,7 +25,7 @@ export default function FetchNews() {
         }
 
         fetchHackerNews();
-        isLoading(false)
+        setTimeout(() => isLoading(false), 2000)
     }, [query]
 
     )
