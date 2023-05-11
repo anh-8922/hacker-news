@@ -34,7 +34,7 @@ export default function UserProfile() {
             </p>
           </div>
           <div className='user-activity'>
-            <h2>Activity by: {user.id}</h2>
+            <p>Activity by: {user.id}</p>
             {user?.submissions?.length > 0 ? (
               user?.submissions.map((submission) => (
                 <div className='activity-item' key={submission.objectID}>
@@ -43,7 +43,7 @@ export default function UserProfile() {
                     <p>
                       <span>On </span>
                       {format(new Date(submission.created_at), 'dd/MM/yyyy')}
-                    </p>
+            ``        </p>
                   </div>
                   <div className='activity-link'>
                     <Link to={`/news/${submission.objectID}`}>View</Link>
